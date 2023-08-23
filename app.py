@@ -9,7 +9,7 @@ def hello():
         height = request.form['height']
         print(height)
         weight = weight_predicter.prediction([[float(height)]])
-        return render_template('index.html',ht = height, wt = weight)
+        return render_template('index.html',ht = height, wt = weight[0])
     return render_template('index.html')
 
 if __name__ == "__main__":
